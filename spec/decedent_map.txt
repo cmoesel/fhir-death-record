@@ -16,9 +16,8 @@ Decedent maps to Patient: // TBD use us-core instead once issue with FHOR pub to
   fix name.use to http://hl7.org/fhir/codesystem-name-use#official
   Sex maps to http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex
   DateOfBirth maps to birthDate
-  constrain identifier to 1..*
-  DecedentID maps to identifier (slice on = type)
-//  SocialSecurityNumber maps to identifier
+  DecedentID maps to identifier (slice on = $this; slice on type = profile)
+  SocialSecurityNumber maps to identifier
   PostalAddress maps to address (slice on = use)
   constrain address.use to 1..1
   SurvivingSpouse maps to contact (slice on = relationship)
